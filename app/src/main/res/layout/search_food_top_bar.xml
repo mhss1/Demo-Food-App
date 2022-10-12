@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+    android:clipToPadding="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/back_card"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        >
+        <ImageView
+            android:src="@drawable/ic_back_arrow"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            app:tint="@color/black"
+            android:layout_gravity="center"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:text="Search Food"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/back_card"
+        app:layout_constraintBottom_toBottomOf="@id/profile_card"
+        app:layout_constraintStart_toEndOf="@id/back_card"
+        app:layout_constraintEnd_toStartOf="@id/profile_card"
+        android:textColor="@color/black"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/profile_card"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        >
+        <ImageView
+            android:src="@drawable/ic_demo_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

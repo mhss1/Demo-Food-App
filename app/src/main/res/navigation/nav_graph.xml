@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onBoardingFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.mhss.app.demofoodapp.presentation.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/onBoardingFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.mhss.app.demofoodapp.presentation.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" >
+        <action
+            android:id="@+id/productsFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.mhss.app.demofoodapp.presentation.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" >
+        <argument
+            android:name="product"
+            app:argType="com.mhss.app.demofoodapp.data.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.mhss.app.demofoodapp.presentation.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/signUpFragment_to_productsFragment"
+            app:destination="@id/productsFragment"
+            />
+    </fragment>
+</navigation>
